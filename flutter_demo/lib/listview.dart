@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class ListViewWidget extends StatelessWidget {
+class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -8,7 +8,7 @@ class ListViewWidget extends StatelessWidget {
         appBar: AppBar(
           title: Text('ListView'),
         ),
-        body: Stack(
+        body: PageView(
           children: <Widget>[
             ListView.separated(
                 itemBuilder: (BuildContext context, int index) => ListTile(title: Text('title $index'), subtitle: Text('body $index'),),
